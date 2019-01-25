@@ -11,9 +11,10 @@ class App extends Component {
 
                 <section className={classes.AppSection}>
 
+                    <Login/>
+
                     App container
 
-                    <Login/>
 
                 </section>
 
