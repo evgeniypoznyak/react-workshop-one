@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classes from './App.module.scss';
 import Login from '../Login/Login';
 import { updateObject } from '../../shared/utility';
-import Layout from '../../hoc/Layout';
+import Layout from '../../hoc/Layout/Layout';
 
 class App extends Component {
     state = {
@@ -16,24 +16,24 @@ class App extends Component {
 
     render() {
 
-        return (
-
-            <Layout>
-                <div className={classes.App}>
-
+        let app = <div className={classes.App}>
                     <section className={classes.AppSection}>
-
                         <Login
                             loginToApp={this.changeStateInApp}
                         />
-
                         {this.state.AppValue}
-
                     </section>
+                  </div>;
 
-                </div>
+        if ('some condition') {
+            // app = <div>LOADING...</div>
+        }
+
+        return (
+
+            <Layout>
+                {app}
             </Layout>
-
 
         );
     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Login.module.scss';
-import Input from '../../component/Input/Input';
+import Input from '../../components/UI/Input/Input';
 import { updateObject } from '../../shared/utility';
 
 class Login extends Component<any, any> {
