@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './Login.module.scss';
 import Input from '../../component/Input/Input';
+import { updateObject } from '../../shared/utility';
 
 class Login extends Component<any, any> {
 
@@ -9,71 +10,21 @@ class Login extends Component<any, any> {
     };
 
     onChangeLoginButtonClicked = () => {
-
-        console.log('onChangeLoginButtonClicked')
-
-        /*
-        // OPTION 1
-        this.setState(
-            {loginValue: 'Hello world from OPTION 1!'}
-        );
-        */
-
-        /*
-         // OPTION 2
-         this.setState((oldState) => {
-             return {
-                 ...oldState,
-                 loginValue: 'Hello world from OPTION 2!'
-             }
-         });
-         */
-
-        /*
-        // OPTION 3
-        const newStateValue = updateObject(this.state, {loginValue: 'Hello world from OPTION 3!'});
-         this.setState(newStateValue);
- 
-         function updateObject(oldState: Readonly<any>, updatedProperties: any): object {
-             return {
-                 ...oldState,
-                 ...updatedProperties
-             };
-         }
-         */
-
+        const newStateValue = updateObject(this.state, {loginValue: 'Hello world from ButtonClicked!'});
+        this.setState(newStateValue);
     };
 
-/*
 
     changeAppState = (value: any) => {
         this.props.loginToApp(value);
     }
 
     onChangeLoginTextHandler = (event: any) => {
-
-        // console.log('onChangeLoginTextHandler', event.target.value);
-
-        /!*
-        // TWO WAY BINDING
-
         const newStateValue = updateObject(this.state, {loginValue: event.target.value});
         this.setState(newStateValue);
-
-        function updateObject(oldState: Readonly<any>, updatedProperties: any): object {
-            return {
-                ...oldState,
-                ...updatedProperties
-            };
-        }
-
-       // this.changeAppState(event.target.value);
-
-        *!/
-
+        this.changeAppState(event.target.value);
     };
 
-*/
 
     render() {
 
@@ -95,10 +46,7 @@ class Login extends Component<any, any> {
                     </button>
                 </div>
 
-{/*
-
                 <Input inputHandler={this.onChangeLoginTextHandler} randomPropsName={localLoginVariable}/>
-*/}
 
             </div>
         )

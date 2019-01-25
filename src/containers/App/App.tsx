@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './App.module.scss';
 import Login from '../Login/Login';
+import { updateObject } from '../../shared/utility';
 
 class App extends Component {
     state = {
@@ -8,24 +9,11 @@ class App extends Component {
     };
 
     changeStateInApp = (value: any) => {
-        console.log('changeStateInApp: ', value)
-
-        /*
-        // Manipulating state
         const newStateValue = updateObject(this.state, {AppValue: value});
         this.setState({...newStateValue});
-        function updateObject(oldState: Readonly<any>, updatedProperties: any): object {
-            return {
-                ...oldState,
-                ...updatedProperties
-            };
-        }
-
-        */
     }
 
     render() {
-
 
         return (
 
