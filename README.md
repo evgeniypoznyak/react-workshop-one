@@ -51,7 +51,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 `npm install node-sass --save`
 
-##For hashes in css classes use syntax for css/scss files:
+## For hashes in css classes use syntax for css/scss files:
 
 `[classname].module.css(scss)`
  
