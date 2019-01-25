@@ -44,6 +44,8 @@ class Login extends Component<any, any> {
 
     };
 
+/*
+
     changeAppState = (value: any) => {
         this.props.loginToApp(value);
     }
@@ -52,7 +54,7 @@ class Login extends Component<any, any> {
 
         // console.log('onChangeLoginTextHandler', event.target.value);
 
-        /*
+        /!*
         // TWO WAY BINDING
 
         const newStateValue = updateObject(this.state, {loginValue: event.target.value});
@@ -67,10 +69,11 @@ class Login extends Component<any, any> {
 
        // this.changeAppState(event.target.value);
 
-        */
+        *!/
 
     };
 
+*/
 
     render() {
 
@@ -79,7 +82,9 @@ class Login extends Component<any, any> {
         return (
 
             <div className={classes.Login}>
+
                 Login container - {this.state.loginValue}
+
                 <h1>{this.props.example}</h1>
                 <div>
                     <button
@@ -90,8 +95,10 @@ class Login extends Component<any, any> {
                     </button>
                 </div>
 
+{/*
 
-                {/*<Input inputHandler={this.onChangeLoginTextHandler} randomPropsName={localLoginVariable}/>*/}
+                <Input inputHandler={this.onChangeLoginTextHandler} randomPropsName={localLoginVariable}/>
+*/}
 
             </div>
         )
