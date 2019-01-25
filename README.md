@@ -42,3 +42,25 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# -------------------------------------------
+# Developer notes:
+
+## Project was created by following commands:
+`npx create-react-app react-workshop-one --typescript`
+
+`npm install node-sass --save`
+
+##For hashes in css classes use syntax for css/scss files:
+
+`[classname].module.css(scss)`
+ 
+`*.module` is letting you to use in your project style as object with keys(classes):
+
+`import classes from './App.module.scss';` (classes is a random name)
+ 
+`<div className={classes.App}>...<div>`
+
+and output will be like this:
+
+`<div class="App_App__2qRxp">...</div>`
