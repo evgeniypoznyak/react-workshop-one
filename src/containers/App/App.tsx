@@ -3,18 +3,41 @@ import classes from './App.module.scss';
 import Login from '../Login/Login';
 
 class App extends Component {
+    state = {
+        AppValue: 'App container'
+    };
+
+    changeStateInApp = (value: any) => {
+        console.log('changeStateInApp: ', value)
+
+        /*
+        // Manipulating state
+        const newStateValue = updateObject(this.state, {AppValue: value});
+        this.setState({...newStateValue});
+        function updateObject(oldState: Readonly<any>, updatedProperties: any): object {
+            return {
+                ...oldState,
+                ...updatedProperties
+            };
+        }
+
+        */
+    }
+
     render() {
-        const someValue: string = 'some props value';
+
+
         return (
 
             <div className={classes.App}>
 
                 <section className={classes.AppSection}>
 
-                    <Login/>
+                    <Login
+                        loginToApp={this.changeStateInApp}
+                    />
 
-                    App container
-
+                    {this.state.AppValue}
 
                 </section>
 

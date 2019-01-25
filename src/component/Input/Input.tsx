@@ -10,6 +10,12 @@ const input = (props: any) => {
 
             INPUT: {props.randomPropsName}
 
+            <div className={classes.inputWrapper}>
+
+               From input stateless: <input onChange={props.inputHandler}/>
+
+            </div>
+
         </div>
 
     )
