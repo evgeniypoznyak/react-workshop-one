@@ -10,8 +10,39 @@ class Login extends Component {
 
 
     onChangeLoginButtonClicked = () => {
-        // ???
+
         console.log('onChangeLoginButtonClicked')
+
+        /*
+        // OPTION 1
+        this.setState(
+            {loginValue: 'Hello world from OPTION 1!'}
+        );
+        */
+
+        /*
+         // OPTION 2
+         this.setState((oldState) => {
+             return {
+                 ...oldState,
+                 loginValue: 'Hello world from OPTION 2!'
+             }
+         });
+         */
+
+        /*
+        // OPTION 3
+        const newStateValue = updateObject(this.state, {loginValue: 'Hello world from OPTION 3!'});
+         this.setState(newStateValue);
+ 
+         function updateObject(oldState: Readonly<any>, updatedProperties: any): object {
+             return {
+                 ...oldState,
+                 ...updatedProperties
+             };
+         }
+         */
+
     };
 
 
