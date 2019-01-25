@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import classes from './App.module.scss';
-import Login from '../Login/Login';
+import Input from '../../component/Input/Input';
 
 class App extends Component {
-  render() {
-    return (
-      <div className={classes.App}>
-        <section className={classes.AppSection}>
-            App container
-            <Login/>
-        </section>
-      </div>
-    );
-  }
+    render() {
+        const someValue: string = 'some props value';
+        return (
+
+            <div className={classes.App}>
+
+                <section className={classes.AppSection}>
+
+                    App container
+
+                    <Input randomPropsName={someValue}/>
+
+                </section>
+
+            </div>
+
+        );
+    }
 }
 
 export default App;
