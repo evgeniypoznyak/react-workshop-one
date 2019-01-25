@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classes from './App.module.scss';
-import './App.scss';
-import Input from '../../component/Input/Input';
+import Login from '../Login/Login';
 
 class App extends Component {
     render() {
@@ -14,9 +13,7 @@ class App extends Component {
 
                     App container
 
-                    <span className="JustNotHashedClass">I never ever be hashed!</span>
-
-                    <Input randomPropsName={someValue}/>
+                    <Login/>
 
                 </section>
 
