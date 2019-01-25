@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './App.module.scss';
 import Login from '../Login/Login';
 import { updateObject } from '../../shared/utility';
+import Layout from '../../hoc/Layout';
 
 class App extends Component {
     state = {
@@ -17,19 +18,22 @@ class App extends Component {
 
         return (
 
-            <div className={classes.App}>
+            <Layout>
+                <div className={classes.App}>
 
-                <section className={classes.AppSection}>
+                    <section className={classes.AppSection}>
 
-                    <Login
-                        loginToApp={this.changeStateInApp}
-                    />
+                        <Login
+                            loginToApp={this.changeStateInApp}
+                        />
 
-                    {this.state.AppValue}
+                        {this.state.AppValue}
 
-                </section>
+                    </section>
 
-            </div>
+                </div>
+            </Layout>
+
 
         );
     }
